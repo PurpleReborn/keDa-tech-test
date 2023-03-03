@@ -1,22 +1,40 @@
+import { Box } from '@mui/material';
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import Header from '../../components/Header';
+import About from './components/About';
+import Contact from './components/Contact';
+import OnBoard from './components/OnBoard';
+import Price from './components/Price';
 
 function Home() {
-  const navigate = useNavigate()
   return (
-    <div>
-      <div>Home</div>
-
-      {/* <Link to={"/example"}>To Example</Link> */}
-      <div
-        onClick={() => {
-          navigate("/example");
-        }}
-      >
-        To Example with navigate
-      </div>
-    </div>
+    <Box>
+      <Header />
+      <Box sx={styles.container}>
+        <div id="board">
+          <OnBoard />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="pricing">
+          <Price />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+      </Box>
+    </Box>
   );
 }
 
 export default Home
+
+const styles = {
+  container: {
+    px: {
+      xs: "30px",
+      md: "40px",
+    },
+  },
+};
