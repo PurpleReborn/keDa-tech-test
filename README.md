@@ -32,3 +32,6 @@ In the project directory, you can run:</p><h5>Steps</h5><ul>
 <li>yarn test</li>
 </ul><h2>Contact</h2>
 <hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/sandi-muhamad-rizalul/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a></p>
+
+<h2>Unit Testing</h2>
+<img target="_blank" src="https://user-images.githubusercontent.com/79769140/222904855-61e8c827-e744-45a8-93ba-e873e810b357.png" style="width: 100%;">
