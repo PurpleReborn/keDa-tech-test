@@ -5,7 +5,7 @@ import { ReactComponent as ILHome } from "../../../assets/ILHome.svg";
 function OnBoard() {
   return (
     <Box sx={styles.onboard}>
-      <Box sx={styles.wrapOnboard} flex={1}>
+      <Box sx={styles.wrapOnboard}>
         <Box sx={styles.titleSt}>Simplify your business </Box>
         <Box sx={styles.titleNd}>In Recording every item that goes in and out</Box>
         <Box sx={styles.titleRd}>
@@ -13,7 +13,7 @@ function OnBoard() {
           <span style={{ fontWeight: "600" }}> Profit</span> you get every day.
         </Box>
       </Box>
-      <Box flex={1} sx={styles.ilhome}>
+      <Box sx={styles.ilhome}>
         <ILHome width={"50%"} />
       </Box>
     </Box>
@@ -40,9 +40,17 @@ const styles = {
     display: "flex",
     // justifyContent: "flex-end",
     justifyContent: "center",
+    flex: {
+      xs: 0,
+      md: 1,
+    },
   },
   wrapOnboard: {
     justifyContent: "center",
+    flex: {
+      xs: 0,
+      md: 1,
+    },
   },
   titleSt: {
     color: "black",
