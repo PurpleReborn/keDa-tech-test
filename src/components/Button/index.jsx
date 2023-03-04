@@ -2,15 +2,20 @@ import { Button } from '@mui/material';
 import React from 'react'
 
 function CustomButton(props) {
-  const { text, fullWidth = false } = props;
+  const { text, fullWidth = false, style, onClick, fontSize = '20px'} = props;
   return (
     <Button
       variant="outlined"
       color="primary"
-      style={{ textTransform: "none", marginTop: '10px' }}
+      sx={{
+        textTransform: "none",
+        marginTop: "10px",
+        ...style,
+      }}
       fullWidth={fullWidth}
+      onClick={onClick}
     >
-      <div style={{ fontSize: "20px" }}>{text}</div>
+      <div style={{ fontSize: fontSize }}>{text}</div>
     </Button>
   );
 }

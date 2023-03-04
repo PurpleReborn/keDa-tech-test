@@ -1,15 +1,26 @@
 import { Box } from '@mui/material';
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Header';
 import About from './components/About';
 import Contact from './components/Contact';
+import ModalLogin from './components/ModalLogin';
 import OnBoard from './components/OnBoard';
 import Price from './components/Price';
 
 function Home() {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Box>
-      <Header />
+      <Header handleLogin={handleOpen} />
       <Box sx={styles.container}>
         <div id="board">
           <OnBoard />
@@ -24,6 +35,7 @@ function Home() {
           <Contact />
         </div>
       </Box>
+      <ModalLogin open={open} handleOpen={handleOpen} handleClose={handleClose}/>
     </Box>
   );
 }

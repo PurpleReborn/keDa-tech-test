@@ -7,7 +7,7 @@ function OnBoard() {
     <Box sx={styles.onboard}>
       <Box sx={styles.wrapOnboard} flex={1}>
         <Box sx={styles.titleSt}>Simplify your business </Box>
-        <Box sx={styles.titleNd}>In Noting every item that goes in and out</Box>
+        <Box sx={styles.titleNd}>In Recording every item that goes in and out</Box>
         <Box sx={styles.titleRd}>
           And record every
           <span style={{ fontWeight: "600" }}> Profit</span> you get every day.

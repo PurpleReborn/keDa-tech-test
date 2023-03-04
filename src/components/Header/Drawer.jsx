@@ -9,8 +9,11 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-scroll";
+import CustomButton from "../Button";
 
-function DrawerComponent() {
+function DrawerComponent(props) {
+
+  const { handleLogin } = props;
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const routeSmall = [
@@ -63,6 +66,7 @@ function DrawerComponent() {
               </div>
             );
           })}
+          <CustomButton text="Login" style={styles.btnLogin} fontSize={'16px'} onClick={handleLogin} />
         </List>
       </Drawer>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
@@ -74,7 +78,11 @@ function DrawerComponent() {
 export default DrawerComponent;
 
 const styles = {
-  icon: { 
-    color: "white" 
+  icon: {
+    color: "white",
+  },
+  btnLogin: {
+    py: '0px',
+    mx: '15px',
   },
 };
